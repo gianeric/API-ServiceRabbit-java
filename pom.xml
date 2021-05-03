@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Api-ServiceRabbit-Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Api-ServiceRabbit-Java</name>
+	<description>Api service Rabbit for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -21,7 +21,6 @@
 			<groupId>com.rabbitmq</groupId>
 			<artifactId>amqp-client</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
