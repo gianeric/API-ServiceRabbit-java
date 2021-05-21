@@ -20,7 +20,7 @@ Open RabbitMQ
 
 Running the Spring Boot application
 <p align="center">
-  <img src="https://imgur.com/4xeVTJb.gif" width="600" title="Screenshot">
+  <img src="https://imgur.com/4xeVTJb.gif" width="800" title="Screenshot">
 </p>
 
 Producing a message in the queue:
@@ -29,7 +29,7 @@ Producing a message in the queue:
 
 Note: The queue consumed is the same as for the <a href="https://github.com/gianeric/API-ServiceRabbit-nodejs">API-ServiceRabbit-nodejs</a>, we named this queue with the name "pedidos_node"
 <p align="center">
-  <img src="https://imgur.com/pxDI2Tq.gif" width="600" title="Screenshot">
+  <img src="https://imgur.com/pxDI2Tq.gif" width="800" title="Screenshot">
 </p>
 
 Consuming messages from the queue:
@@ -38,7 +38,7 @@ Consuming messages from the queue:
 
 Note: The queue consumed is the same as for the <a href="https://github.com/gianeric/API-ServiceRabbit-nodejs">API-ServiceRabbit-nodejs</a>, we named this queue with the name "pedidos_node"
 <p align="center">
-  <img src="https://imgur.com/kOmv851.gif" width="600" title="Screenshot">
+  <img src="https://imgur.com/kOmv851.gif" width="800" title="Screenshot">
 </p>
 
 ## MongoDB (Orders)
@@ -46,14 +46,14 @@ Inserting an order in the NoSQL MongoDB database
 >POST
 > <link>localhost:8080/servico-mongo/v1/pedidos</link>
 <p align="center">
-  <img src="https://imgur.com/opf58AN.png" width="600" title="Screenshot">
+  <img src="https://imgur.com/opf58AN.png" width="800" title="Screenshot">
 </p>
 
 Searching for orders in the NoSQL MongoDB database
 >GET
 > <link>localhost:8080/servico-mongo/v1/pedidos</link>
 <p align="center">
-  <img src="https://imgur.com/0JsGJ3R.png" width="600" title="Screenshot">
+  <img src="https://imgur.com/0JsGJ3R.png" width="800" title="Screenshot">
 </p>
 
 
