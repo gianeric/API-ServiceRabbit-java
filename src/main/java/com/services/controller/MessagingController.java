@@ -6,9 +6,9 @@ import com.services.service.rabbit.Producer;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(Routes.APLICATION_NAME + Routes.API_VERSION + Routes.RESOURCE_CALLBACK_API)
+@RequestMapping(Routes.APLICATION_NAME_RABBIT + Routes.API_VERSION_RABBIT + Routes.RESOURCE_CALLBACK_API_RABBIT)
 public class MessagingController {
-    private final static String QUEUE_NAME = "pedidos_node";
+    private final static String QUEUE_NAME = "pedidos";
     private static String message = "";
 
     @PostMapping
