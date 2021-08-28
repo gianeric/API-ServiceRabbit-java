@@ -3,11 +3,8 @@ Study of producers and consumers using queues in RabbitMQ
 Study of insert orders in mongodb local
 
 ## Docker
-Try the community Docker image:
+Try the community Docker image with port 15672:
 > docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-
-At the command prompt you can type the following command in cmd, to list the port on which the container will run RabbitMQ, normally it will be port 15672
-> <link>http://localhost:15672</link>
 
 ## RabbitMQ 
 Open RabbitMQ
