@@ -8,4 +8,8 @@ public class Routes {
     public static final String APLICATION_NAME_MONGO = "/servico-mongo";
     public static final String API_VERSION_MONGO = "/v1";
     public static final String RESOURCE_CALLBACK_API_MONGO = "/pedidos";
+
+    public static final String APLICATION_NAME_SQL = "/servico-sql";
+    public static final String API_VERSION_SQL = "/v1";
+    public static final String RESOURCE_CALLBACK_API_SQL = "/pedidos";
 }

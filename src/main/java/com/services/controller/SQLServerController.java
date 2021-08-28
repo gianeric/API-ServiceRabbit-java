@@ -1,19 +1,19 @@
 package com.services.controller;
 
 import com.services.configuration.Routes;
-import com.services.dataprovider.repository.mongo.model.Pedido;
-import com.services.service.mongo.PedidosMongoService;
+import com.services.dataprovider.repository.sqlserver.model.Pedido;
+import com.services.service.sqlserver.PedidosSqlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(Routes.APLICATION_NAME_MONGO + Routes.API_VERSION_MONGO + Routes.RESOURCE_CALLBACK_API_MONGO)
-public class MongoController {
+@RequestMapping(Routes.APLICATION_NAME_SQL + Routes.API_VERSION_SQL + Routes.RESOURCE_CALLBACK_API_SQL)
+public class SQLServerController {
 
     @Autowired
-    private PedidosMongoService pedidosService;
+    private PedidosSqlService pedidosService;
 
     @GetMapping
     public List<Pedido> obterDados(){
