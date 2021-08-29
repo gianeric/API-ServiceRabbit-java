@@ -7,7 +7,9 @@ import java.util.List;
 public interface PedidosMongoService {
     public List<Pedido> obterDados();
 
-    public Pedido obterDadosPorCodigo(String codigo);
+    public Pedido obterDadosPorId(int id);
 
     public Pedido inserirDados(Pedido pedidos);
+
+    public Pedido excluirDadosPorId(int id);
 }

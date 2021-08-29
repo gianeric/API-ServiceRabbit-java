@@ -49,7 +49,10 @@ Searching for orders in the NoSQL MongoDB database
 GET
 > <link>http://localhost:8080/servico-mongo/v1/pedidos</link>
 
+GET ID
+> <link>http://localhost:8080/servico-mongo/v1/pedidos/1</link>
 
+#
 Inserting an order in the NoSQL MongoDB database    
 
 POST
@@ -66,6 +69,12 @@ JSON
     "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
 }
 ```
+
+#
+DELETE ID
+> <link>http://localhost:8080/servico-mongo/v1/pedidos/1</link>
+
+
 #
 ## SQL Server (Orders)
 Searching for orders in the SQL Server database

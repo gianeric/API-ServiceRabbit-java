@@ -17,8 +17,8 @@ public class Pedido implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private Integer id;
-    private Integer codigoPedido;
+    private int id;
+    private int codigoPedido;
     private Object dadosPessoa;
     private Date dataPedido;
     private String nomePedido;
