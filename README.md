@@ -1,11 +1,11 @@
 # API-ServiceRabbit-java
 Study of producers and consumers using queues in RabbitMQ
 Study of insert orders in mongodb local
-
+#
 ## Docker
 Try the community Docker image with port 15672:
 > docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-
+#
 ## RabbitMQ 
 Open RabbitMQ
 > <link>localhost:15672</link>
@@ -33,6 +33,7 @@ Note: The queue consumed is the same as for the <a href="https://github.com/gian
   <img src="https://imgur.com/kOmv851.gif" width="800" title="Screenshot">
 </p>
 
+#
 ## MongoDB (Orders)
 Searching for orders in the NoSQL MongoDB database
 
@@ -56,7 +57,7 @@ JSON
     "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
 }
 ```
-
+#
 ## SQL Server (Orders)
 Searching for orders in the SQL Server database
 
