@@ -1,10 +1,19 @@
 # API-ServiceRabbit-java
 Study of producers and consumers using queues in RabbitMQ
 Study of insert orders in mongodb local
+
 #
 ## Docker
-Try the community Docker image with port 15672:
+Use the community image Docker from Rabbit MQ with port 15672:
 > docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+Use the community image Docker from Mongo Express with port 27017:
+>docker run --name mongodb-container -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
+
+Use the community image Docker from SQL Server with port 1433:
+>docker run --name sqlserver-container -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=@Password123" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+
+
 #
 ## RabbitMQ 
 Open RabbitMQ
@@ -50,9 +59,9 @@ JSON
 {
     "id":"1",
     "codigoPedido":"1",
-    "codigoPessoa":"1",
+    "dadosPessoa":"[{nome: Gian Eric}, {dataNascimento: 2000-01-01}]",
     "dataPedido":"2021-01-01",
-    "nomePedido":"Gian Eric",
+    "nomePedido":"Ordem de Serviço 1",
     "tipoPedido":"Ordem",
     "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
 }
@@ -76,7 +85,7 @@ JSON
     "codigoPedido":"1",
     "codigoPessoa":"1",
     "dataPedido":"2021-01-01",
-    "nomePedido":"Gian Eric",
+    "nomePedido":"Ordem de Serviço 1",
     "tipoPedido":"Ordem",
     "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
 }
