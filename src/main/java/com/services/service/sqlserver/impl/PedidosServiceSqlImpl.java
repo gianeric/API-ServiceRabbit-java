@@ -1,22 +1,23 @@
-package com.services.service.mongo.impl;
+package com.services.service.sqlserver.impl;
 
-import com.services.dataprovider.model.Pedido;
-import com.services.repository.PedidosRepository;
-import com.services.service.mongo.PedidosService;
+
+import com.services.dataprovider.repository.sqlserver.PedidosSqlRepository;
+import com.services.dataprovider.repository.sqlserver.model.Pedido;
+import com.services.service.sqlserver.PedidosSqlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class PedidosServiceImpl implements PedidosService {
+public class PedidosServiceSqlImpl implements PedidosSqlService {
 
     @Autowired
-    private PedidosRepository pedidosRepository;
+    private PedidosSqlRepository pedidosRepository;
 
     @Override
     public List<Pedido> obterDados() {
-        return this.pedidosRepository.findAll();
+        return (List<Pedido>) this.pedidosRepository.findAll();
     }
 
     @Override

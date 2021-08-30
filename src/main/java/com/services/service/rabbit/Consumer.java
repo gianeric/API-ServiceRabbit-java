@@ -5,6 +5,8 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 
+import java.util.ArrayList;
+
 public class Consumer {
     private String QUEUE_NAME;
     private String message;
@@ -40,11 +42,10 @@ public class Consumer {
         //Wait messages
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             message = new String(delivery.getBody(), "UTF-8");
-
             System.out.println(" [x] Received '" + message + "'");
         };
 
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> { });
-        return " [x] Received '" + message + "'";
+        return " [x] Received";
     }
 }

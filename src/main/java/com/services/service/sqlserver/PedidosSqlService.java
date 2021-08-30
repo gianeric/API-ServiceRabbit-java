@@ -1,10 +1,11 @@
-package com.services.service.mongo;
+package com.services.service.sqlserver;
 
-import com.services.dataprovider.model.Pedido;
+
+import com.services.dataprovider.repository.sqlserver.model.Pedido;
 
 import java.util.List;
 
-public interface PedidosService {
+public interface PedidosSqlService {
     public List<Pedido> obterDados();
 
     public Pedido obterDadosPorCodigo(String codigo);

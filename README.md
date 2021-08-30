@@ -2,18 +2,19 @@
 Study of producers and consumers using queues in RabbitMQ
 Study of insert orders in mongodb local
 
+#
 ## Docker
-Try the community Docker image:
+Use the community image Docker from Rabbit MQ with port 15672:
 > docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
-At the command prompt you can type the following command in cmd, to list the port on which the container will run RabbitMQ, normally it will be port <link>localhost:15672</link>
-> docker container ls
+Use the community image Docker from Mongo Express with port 27017:
+>docker run --name mongodb-container -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
 
-Result
->| CONTAINER   | ID                        | IMAGE                   | COMMAND             | CREATED            | STATUS | PORTS                                                                                                         | NAMES    |
->| ----------- | ------------------------- | ----------------------- | ------------------- | -------------------| ------ | ------------------------------------------------------------------------------------------------------------- | -------- |
->| 4f56218f00ff|   rabbitmq:3-management   | "docker-entrypoint.s…"  | About an hour ago   | Up About an hour   |        | 4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   | rabbitmq |
+Use the community image Docker from SQL Server with port 1433:
+>docker run --name sqlserver-container -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=@Password123" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 
+
+#
 ## RabbitMQ 
 Open RabbitMQ
 > <link>localhost:15672</link>
@@ -41,19 +42,60 @@ Note: The queue consumed is the same as for the <a href="https://github.com/gian
   <img src="https://imgur.com/kOmv851.gif" width="800" title="Screenshot">
 </p>
 
+#
 ## MongoDB (Orders)
-Inserting an order in the NoSQL MongoDB database
->POST
-> <link>localhost:8080/servico-mongo/v1/pedidos</link>
-<p align="center">
-  <img src="https://imgur.com/opf58AN.png" width="800" title="Screenshot">
-</p>
-
 Searching for orders in the NoSQL MongoDB database
->GET
-> <link>localhost:8080/servico-mongo/v1/pedidos</link>
-<p align="center">
-  <img src="https://imgur.com/0JsGJ3R.png" width="800" title="Screenshot">
-</p>
+
+GET
+> <link>http://localhost:8080/servico-mongo/v1/pedidos</link>
+
+GET ID
+> <link>http://localhost:8080/servico-mongo/v1/pedidos/1</link>
+
+#
+Inserting an order in the NoSQL MongoDB database    
+
+POST
+> <link>http://localhost:8080/servico-mongo/v1/pedidos</link>
+JSON
+```
+{
+    "id":"1",
+    "codigoPedido":"1",
+    "dadosPessoa":"[{nome: Gian Eric}, {dataNascimento: 2000-01-01}]",
+    "dataPedido":"2021-01-01",
+    "nomePedido":"Ordem de Serviço 1",
+    "tipoPedido":"Ordem",
+    "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
+}
+```
+
+#
+DELETE ID
+> <link>http://localhost:8080/servico-mongo/v1/pedidos/1</link>
 
 
+#
+## SQL Server (Orders)
+Searching for orders in the SQL Server database
+
+GET
+> <link>http://localhost:8080/servico-sql/v1/pedidos</link>
+
+
+Inserting an order in the NoSQL MongoDB database
+
+POST
+> <link>http://localhost:8080/servico-sql/v1/pedidos</link>
+JSON
+```
+{
+    "id":"1",
+    "codigoPedido":"1",
+    "codigoPessoa":"1",
+    "dataPedido":"2021-01-01",
+    "nomePedido":"Ordem de Serviço 1",
+    "tipoPedido":"Ordem",
+    "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
+}
+```

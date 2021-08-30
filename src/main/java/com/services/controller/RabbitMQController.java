@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(Routes.APLICATION_NAME_RABBIT + Routes.API_VERSION_RABBIT + Routes.RESOURCE_CALLBACK_API_RABBIT)
-public class MessagingController {
+public class RabbitMQController {
     private final static String QUEUE_NAME = "pedidos";
     private static String message = "";
 
