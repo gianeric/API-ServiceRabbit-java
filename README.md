@@ -90,7 +90,6 @@ POST
 JSON
 ```
 {
-    "id":"1",
     "codigoPedido":"1",
     "codigoPessoa":"1",
     "dataPedido":"2021-01-01",

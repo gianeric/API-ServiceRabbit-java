@@ -16,7 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table(name = "pedido")
+@Table(name = "pedidos")
 public class Pedido implements Serializable {
     private static final long serialVersionUID = 1L;
 
