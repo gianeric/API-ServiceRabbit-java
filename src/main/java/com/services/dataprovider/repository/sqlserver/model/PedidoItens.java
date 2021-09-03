@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Builder
 @Entity
 @Table(name = "pedidos_itens", schema="dbo")
 public class PedidoItens implements Serializable {

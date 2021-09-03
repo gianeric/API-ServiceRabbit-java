@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -11,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Builder
 @Entity
 @Table(name = "pessoas", schema="dbo")
 public class Pessoa implements Serializable {
@@ -25,5 +27,5 @@ public class Pessoa implements Serializable {
     private String nomePessoa;
 
     @Column(name = "data_nascimento_pessoa")
-    private Date dataNascimentoPessoa;
+    private LocalDate dataNascimentoPessoa;
 }

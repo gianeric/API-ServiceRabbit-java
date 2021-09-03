@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -13,6 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Builder
 @Entity
 @Table(name = "pedidos", schema="dbo")
 public class Pedido implements Serializable {
@@ -31,7 +33,7 @@ public class Pedido implements Serializable {
     private Long numeroPedido;
 
     @Column(name = "data_pedido", nullable = false)
-    private Date dataPedido;
+    private LocalDate dataPedido;
 
     @Column(name = "nome_pedido", length = 255)
     private String nomePedido;
