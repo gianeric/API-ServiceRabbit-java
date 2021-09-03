@@ -90,11 +90,11 @@ POST
 JSON
 ```
 {
-    "codigoPedido":"1",
-    "codigoPessoa":"1",
-    "dataPedido":"2021-01-01",
-    "nomePedido":"Ordem de Serviço 1",
-    "tipoPedido":"Ordem",
-    "itensPedido":"[{descricao: Instalação do motor de arranque}, {descricao: Instalação do amortecedor}, {descricao: Troca da bomba de gasolina}]"
-}
+    "codigoPedido": "",
+    "pessoaPedido": {"nomePessoa": "Gian Eric", "dataNascimentoPessoa": "1993-10-21"},
+    "numeroPedido": "3",
+    "dataPedido": "2021-01-01",
+    "nomePedido": "Pedido de Manutenção",
+    "tipoPedido": "Ordem",
+    "pedidoItens": {"codigoPedidoItem": "", "descricao": "Instalação da manopla", "valor": "41.78"}
 ```

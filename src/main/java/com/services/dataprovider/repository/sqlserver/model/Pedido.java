@@ -1,13 +1,11 @@
 package com.services.dataprovider.repository.sqlserver.model;
 
 import lombok.*;
-import javax.persistence.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Getter
@@ -16,17 +14,32 @@ import java.util.Date;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table(name = "pedidos")
+@Table(name = "pedidos", schema="dbo")
 public class Pedido implements Serializable {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 8011413255131735002L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "codigo_pedido", nullable = false)
     private Integer codigoPedido;
-    private Integer codigoPessoa;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "codigo_pessoa", nullable = false)
+    private Pessoa pessoaPedido;
+
+    @Column(name = "numero_pedido", nullable = false)
+    private Long numeroPedido;
+
+    @Column(name = "data_pedido", nullable = false)
     private Date dataPedido;
+
+    @Column(name = "nome_pedido", length = 255)
     private String nomePedido;
+
+    @Column(name = "tipo_pedido", length = 50, nullable = false)
     private String tipoPedido;
-    //private Object itensPedido;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "codigo_pedido_item", nullable = false)
+    private PedidoItens pedidoItens;
 }

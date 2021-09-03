@@ -5,10 +5,10 @@ import com.services.dataprovider.repository.sqlserver.model.Pedido;
 
 import java.util.List;
 
-public interface PedidosSqlService {
+public interface PedidoServiceSQL {
     public List<Pedido> obterDados();
 
-    public Pedido obterDadosPorCodigo(String codigo);
+    public Pedido obterDadosPorCodigo(Integer codigo);
 
     public Pedido inserirDados(Pedido pedidos);
 }

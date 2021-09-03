@@ -2,7 +2,7 @@ package com.services.controller;
 
 import com.services.configuration.Routes;
 import com.services.dataprovider.repository.sqlserver.model.Pedido;
-import com.services.service.sqlserver.PedidosSqlService;
+import com.services.service.sqlserver.PedidoServiceSQL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,8 @@ import java.util.List;
 public class SQLServerController {
 
     @Autowired
-    private PedidosSqlService pedidosService;
+    private PedidoServiceSQL pedidosService;
+
 
     @GetMapping
     public List<Pedido> obterDados(){
@@ -21,7 +22,7 @@ public class SQLServerController {
     }
 
     @GetMapping("/codigo")
-    public Pedido obterDadosPorID(@PathVariable String codigo){
+    public Pedido obterDadosPorID(@PathVariable Integer codigo){
         return this.pedidosService.obterDadosPorCodigo(codigo);
     }
 
