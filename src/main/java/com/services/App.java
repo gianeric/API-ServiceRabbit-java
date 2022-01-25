@@ -11,9 +11,9 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories(basePackageClasses = PedidosMongoRepository.class)
 @EnableJpaRepositories(excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = PedidosMongoRepository.class))
 @SpringBootApplication
-public class MessagingApplication {
+public class App {
 	public static void main(String[] args) {
-		SpringApplication.run(MessagingApplication.class, args);
+		SpringApplication.run(App.class, args);
 	}
 }
 
