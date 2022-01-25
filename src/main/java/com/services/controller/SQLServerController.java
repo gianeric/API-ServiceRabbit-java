@@ -1,7 +1,7 @@
 package com.services.controller;
 
 import com.services.configuration.Routes;
-import com.services.dataprovider.repository.sqlserver.model.Pedido;
+import com.services.dataprovider.repository.sqlserver.model.PedidoSQLServer;
 import com.services.service.sqlserver.PedidoServiceSQL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,17 +17,17 @@ public class SQLServerController {
 
 
     @GetMapping
-    public List<Pedido> obterDados(){
+    public List<PedidoSQLServer> obterDados(){
         return this.pedidosService.obterDados();
     }
 
     @GetMapping("/codigo")
-    public Pedido obterDadosPorID(@PathVariable Integer codigo){
+    public PedidoSQLServer obterDadosPorID(@PathVariable Integer codigo){
         return this.pedidosService.obterDadosPorCodigo(codigo);
     }
 
     @PostMapping
-    public Pedido inserirDados(@RequestBody Pedido pedidos){
+    public PedidoSQLServer inserirDados(@RequestBody PedidoSQLServer pedidos){
         return this.pedidosService.inserirDados(pedidos);
     }
 }

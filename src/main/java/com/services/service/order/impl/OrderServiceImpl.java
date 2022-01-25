@@ -2,7 +2,7 @@ package com.services.service.order.impl;
 
 import com.services.dataprovider.domain.PedidoDomain;
 import com.services.dataprovider.repository.mongo.PedidosMongoRepository;
-import com.services.dataprovider.repository.mongo.model.Pedido;
+import com.services.dataprovider.repository.mongo.model.PedidoMongo;
 import com.services.service.order.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class OrderServiceImpl implements OrderService {
     public PedidoDomain inserirDados(PedidoDomain pedido) {
         log.info("Inserindo Pedido.");
 
-        Pedido pedidoMongoDB = new Pedido();
+        PedidoMongo pedidoMongoDB = new PedidoMongo();
         //pedidoMongoDB.setId(pedido.hashCode());
         pedidoMongoDB.setCodigoPedido(pedido.getCodigoPedido());
         pedidoMongoDB.setDataPedido(Date.from(LocalDate.of(2022, 01, 01).atStartOfDay(ZoneId.systemDefault()).toInstant()));

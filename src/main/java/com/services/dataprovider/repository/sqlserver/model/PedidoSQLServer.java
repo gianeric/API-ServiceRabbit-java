@@ -5,9 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -17,7 +15,7 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name = "pedidos", schema="dbo")
-public class Pedido implements Serializable {
+public class PedidoSQLServer implements Serializable {
     private static final long serialVersionUID = 8011413255131735002L;
 
     @Id
@@ -27,7 +25,7 @@ public class Pedido implements Serializable {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "codigo_pessoa", nullable = false)
-    private Pessoa pessoaPedido;
+    private PessoaSQLServer pessoaPedido;
 
     @Column(name = "numero_pedido", nullable = false)
     private Long numeroPedido;
@@ -43,5 +41,5 @@ public class Pedido implements Serializable {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "codigo_pedido_item", nullable = false)
-    private PedidoItens pedidoItens;
+    private PedidoItensSQLServer pedidoItens;
 }

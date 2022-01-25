@@ -1,14 +1,14 @@
 package com.services.service.sqlserver;
 
 
-import com.services.dataprovider.repository.sqlserver.model.Pedido;
+import com.services.dataprovider.repository.sqlserver.model.PedidoSQLServer;
 
 import java.util.List;
 
 public interface PedidoServiceSQL {
-    public List<Pedido> obterDados();
+    public List<PedidoSQLServer> obterDados();
 
-    public Pedido obterDadosPorCodigo(Integer codigo);
+    public PedidoSQLServer obterDadosPorCodigo(Integer codigo);
 
-    public Pedido inserirDados(Pedido pedidos);
+    public PedidoSQLServer inserirDados(PedidoSQLServer pedidos);
 }

@@ -15,7 +15,7 @@ import java.util.Date;
 @Builder
 @Entity
 @Table(name = "pessoas", schema="dbo")
-public class Pessoa implements Serializable {
+public class PessoaSQLServer implements Serializable {
     private static final long serialVersionUID = 2601164526954693755L;
 
     @Id

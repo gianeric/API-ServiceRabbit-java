@@ -1,15 +1,15 @@
 package com.services.service.mongo;
 
-import com.services.dataprovider.repository.mongo.model.Pedido;
+import com.services.dataprovider.repository.mongo.model.PedidoMongo;
 
 import java.util.List;
 
 public interface PedidosMongoService {
-    public List<Pedido> obterDados();
+    public List<PedidoMongo> obterDados();
 
-    public Pedido obterDadosPorId(int id);
+    public PedidoMongo obterDadosPorId(int id);
 
-    public Pedido inserirDados(Pedido pedidos);
+    public PedidoMongo inserirDados(PedidoMongo pedidos);
 
-    public Pedido excluirDadosPorId(int id);
+    public PedidoMongo excluirDadosPorId(int id);
 }

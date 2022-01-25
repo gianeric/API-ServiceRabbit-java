@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Builder
 @Entity
 @Table(name = "pedidos_itens", schema="dbo")
-public class PedidoItens implements Serializable {
+public class PedidoItensSQLServer implements Serializable {
     private static final long serialVersionUID = -1408030468442129411L;
 
     @Id

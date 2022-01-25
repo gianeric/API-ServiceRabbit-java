@@ -2,8 +2,6 @@ package com.services.controller;
 
 import com.services.configuration.Routes;
 import com.services.dataprovider.domain.PedidoDomain;
-import com.services.dataprovider.repository.mongo.model.Pedido;
-import com.services.service.mongo.PedidosMongoService;
 import com.services.service.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;

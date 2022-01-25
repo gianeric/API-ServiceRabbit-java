@@ -1,7 +1,7 @@
 package com.services.controller;
 
 import com.services.configuration.Routes;
-import com.services.dataprovider.repository.mongo.model.Pedido;
+import com.services.dataprovider.repository.mongo.model.PedidoMongo;
 import com.services.service.mongo.PedidosMongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,22 +18,22 @@ public class MongoController {
     private PedidosMongoService pedidosService;
 
     @GetMapping
-    public List<Pedido> obterDados() {
+    public List<PedidoMongo> obterDados() {
         return this.pedidosService.obterDados();
     }
 
     @GetMapping(path = "/{id}")
-    public Pedido obterDadosPorID(@PathVariable int id) {
+    public PedidoMongo obterDadosPorID(@PathVariable int id) {
         return this.pedidosService.obterDadosPorId(id);
     }
 
     @PostMapping
-    public Pedido inserirDados(@RequestBody Pedido pedidos) {
+    public PedidoMongo inserirDados(@RequestBody PedidoMongo pedidos) {
         return this.pedidosService.inserirDados(pedidos);
     }
 
     @DeleteMapping(path = "/{id}")
-    public Pedido excluirDadosPorId(@PathVariable int id) {
+    public PedidoMongo excluirDadosPorId(@PathVariable int id) {
         return this.pedidosService.excluirDadosPorId(id);
     }
 }

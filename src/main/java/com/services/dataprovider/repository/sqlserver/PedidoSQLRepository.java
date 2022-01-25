@@ -1,10 +1,10 @@
 package com.services.dataprovider.repository.sqlserver;
 
-import com.services.dataprovider.repository.sqlserver.model.Pedido;
-import com.services.dataprovider.repository.sqlserver.model.Pessoa;
+import com.services.dataprovider.repository.sqlserver.model.PedidoSQLServer;
+import com.services.dataprovider.repository.sqlserver.model.PessoaSQLServer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-public interface PedidoSQLRepository extends CrudRepository<Pedido, Integer> {
-    Pessoa findByCodigoPedido(@Param("codigoPedido") Integer codigoPedido);
+public interface PedidoSQLRepository extends CrudRepository<PedidoSQLServer, Integer> {
+    PessoaSQLServer findByCodigoPedido(@Param("codigoPedido") Integer codigoPedido);
 }

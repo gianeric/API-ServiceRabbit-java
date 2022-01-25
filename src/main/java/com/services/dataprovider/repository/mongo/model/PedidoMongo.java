@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Pedido implements Serializable {
+public class PedidoMongo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
