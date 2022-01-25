@@ -1,6 +1,10 @@
 package com.services.configuration;
 
 public class Routes {
+    public static final String APLICATION_NAME = "/servico";
+    public static final String API_VERSION = "/v1";
+    public static final String RESOURCE_CALLBACK_API = "/pedidos";
+
     public static final String APLICATION_NAME_RABBIT = "/servico-rabbitmq";
     public static final String API_VERSION_RABBIT = "/v1";
     public static final String RESOURCE_CALLBACK_API_RABBIT = "/pedidos";

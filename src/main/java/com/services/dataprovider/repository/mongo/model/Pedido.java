@@ -19,9 +19,9 @@ public class Pedido implements Serializable {
     @Id
     private int id;
     private int codigoPedido;
-    private Object dadosPessoa;
     private Date dataPedido;
     private String nomePedido;
     private String tipoPedido;
+    private Object dadosPessoa;
     private Object itensPedido;
 }
